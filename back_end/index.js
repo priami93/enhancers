@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const axios = require('axios');
+require('dotenv').config();
 
 const app = express();
 const port = 3000;
@@ -28,7 +29,6 @@ app.get('/cities', (req, res) => {
                     return error
                 });
             results.push(response.data);
-            console.log(response.data.weather);
         }
     }
 
@@ -47,7 +47,6 @@ app.get('/cities', (req, res) => {
 
             objIndex = results.findIndex((obj => obj.name == city));
             results[objIndex].yelp_businesses = response.data.businesses;
-            console.log(response.data.businesses);
         }
     }
 
