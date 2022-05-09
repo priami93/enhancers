@@ -45,7 +45,7 @@ const MonthBox = () => {
                                 component="img"
                                 image={require("../Assets/images/" + getImg(weather))}
                                 alt={weather}
-                                className="p-[28px 10px]"
+                                className="!h-auto !w-auto m-auto"
                             />
                         </div>
                     </div>
